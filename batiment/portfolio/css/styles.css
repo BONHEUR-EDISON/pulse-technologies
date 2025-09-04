@@ -1,3 +1,10 @@
+ :root{
+      /* Thème clair par défaut */
+      --bg:#fdfdfd; --panel:#ffffff; --panel-2:#f5f5f5; --text:#0b1211; --muted:#5a5a5a;
+      --brand:#ff9f1c; --brand-2:#ffbf69; --accent:#0bb3a7; --border:#d1d1d1; --card:#ffffff;
+      --radius:18px; --shadow:0 14px 40px rgba(0,0,0,.10); --max:1200px;
+    }
+
 /* ===== Reset & Global ===== */
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family: 'Poppins', sans-serif; background:#f5f5f5; color:#222; transition: background 0.4s, color 0.4s; line-height:1.6;}
@@ -45,3 +52,9 @@ footer { text-align:center; padding:2rem; background:#222; color:#fff; margin-to
 @media(max-width:480px){
   .gal-item { width:100%; }
 }
+
+   /* Breadcrumb */
+    .breadcrumb{background:var(--panel);border-bottom:1px solid var(--border)}
+    .breadcrumb .container{display:flex;gap:8px;align-items:center;height:44px}
+    .crumb{color:var(--muted)}
+    .crumb strong{color:var(--text)}

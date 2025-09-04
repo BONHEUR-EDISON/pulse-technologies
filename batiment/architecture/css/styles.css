@@ -8,6 +8,10 @@
       --accent: #ff6600;
       --footer-bg: #111;
       --footer-text: #ddd;
+      --border:#d1d1d1; 
+      --muted:#5a5a5a;
+      --panel:#f9f9f9;
+      
     }
     * { box-sizing:border-box; margin:0; padding:0; }
     body {
@@ -63,6 +67,11 @@
     }
     .dark-toggle:hover { background: rgba(255,255,255,0.4); }
 
+    /* Breadcrumb */
+    .breadcrumb{background:var(--panel);border-bottom:1px solid var(--border)}
+    .breadcrumb .container{display:flex;gap:8px;align-items:center;height:44px}
+    .crumb{color:var(--muted)}
+    .crumb strong{color:var(--text-light)}
     /* Hero */
     .hero {
       text-align:center;

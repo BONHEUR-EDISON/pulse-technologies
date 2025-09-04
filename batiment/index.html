@@ -1,97 +1,138 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pulse-Technologie-Bâtiment | Construction, Architecture & Rénovation</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body data-theme="light">
-
-<header>
-  <div class="container nav">
-    <div class="logo"><a href="../index.html">🏗️ Pulse-Technologie-Bâtiment</a></div>
-    <nav class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#temoignages">Témoignages</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
-      <div id="theme-toggle">🌙</div>
-    </nav>
-    <button id="burger" class="burger" aria-label="Menu">☰</button>
-  </div>
-</header>
+  <header>
+    <div class="container nav">
+      <div class="logo"><a href="../index.html">🏗️ Pulse-Technologie-Bâtiment</a></div>
+      <nav class="nav-links" aria-label="Menu principal">
+        <a href="#services">Services</a>
+        <a href="#temoignages">Témoignages</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+        <div id="theme-toggle" role="button" tabindex="0" aria-label="Changer le thème">🌙</div>
+      </nav>
+      <button id="burger" class="burger" aria-label="Menu">☰</button>
+    </div>
+  </header>
 
 <section class="hero container">
-  <div>
+  <div class="hero-bg">
+    <div class="hero-bg-slide" style="background-image: url('images/bat1.jpg')"></div>
+    <div class="hero-bg-slide" style="background-image: url('images/bat2.jpg')"></div>
+    <div class="hero-bg-slide" style="background-image: url('images/bg1.jpg')"></div>
+  </div>
+  <div class="hero-content">
     <span class="badge">✨ Expertise certifiée</span>
-    <h1>Construisons vos projets avec <span style="color:var(--brand)">Pulse-Technologie-Bâtiment</span></h1>
-    <p>Maisons, bureaux, rénovations et architecture moderne. Notre équipe concrétise vos idées avec qualité et respect des délais.</p>
+    <h1>
+      Construisons vos projets avec
+      <span style="color: var(--brand)">Pulse-Technologie-Bâtiment</span>
+    </h1>
+    <p>
+      Maisons, bureaux, rénovations et architecture moderne. Notre équipe
+      concrétise vos idées avec qualité et respect des délais.
+    </p>
     <a class="btn" href="#services">Découvrir nos services</a>
   </div>
-  <img src="https://images.unsplash.com/photo-1599464443345-7b7a1bff2f53?q=80&w=1200&auto=format&fit=crop" alt="Chantier">
 </section>
 
-<section id="services">
-  <div class="container">
-    <div class="section-head">
-      <h2>Nos Services</h2>
-      <p>Choisissez le domaine qui correspond à votre projet.</p>
-    </div>
-    <div class="carousel">
-      <div class="slide">
-        <h3>🏠 Construction</h3>
-        <p>Maisons, bâtiments modernes avec garantie décennale.</p>
-        <a class="btn secondary" href="construction/index.html">En savoir plus</a>
+
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <h2>Nos Services</h2>
+        <p>Choisissez le domaine qui correspond à votre projet.</p>
       </div>
-      <div class="slide">
-        <h3>🏛️ Architecture</h3>
-        <p>Plans, design et optimisation des espaces intérieurs.</p>
-        <a class="btn secondary" href="architecture/index.html">En savoir plus</a>
+      <div class="carousel" tabindex="0" aria-label="Carrousel des services">
+        <div class="slide">
+          <h3>🏠 Construction</h3>
+          <p>Maisons, bâtiments modernes avec garantie décennale.</p>
+          <a class="btn secondary" href="construction/index.html">En savoir plus</a>
+        </div>
+        <div class="slide">
+          <h3>🏛️ Architecture</h3>
+          <p>Plans, design et optimisation des espaces intérieurs.</p>
+          <a class="btn secondary" href="architecture/index.html">En savoir plus</a>
+        </div>
+        <div class="slide">
+          <h3>🔧 Rénovation</h3>
+          <p>Modernisation, extensions et transformation d’espaces.</p>
+          <a class="btn secondary" href="renovation/index.html">En savoir plus</a>
+        </div>
       </div>
-      <div class="slide">
-        <h3>🔧 Rénovation</h3>
-        <p>Modernisation, extensions et transformation d’espaces.</p>
-        <a class="btn secondary" href="renovation/index.html">En savoir plus</a>
+
+      <!-- Boutons de contrôle du carousel -->
+      <div class="carousel-controls">
+        <button id="carousel-left" aria-label="Défiler vers la gauche">‹</button>
+        <button id="carousel-right" aria-label="Défiler vers la droite">›</button>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="temoignages">
-  <div class="container">
-    <div class="section-head">
-      <h2>Témoignages</h2>
-      <p>Ils nous ont fait confiance pour leurs projets.</p>
+  <section id="temoignages">
+    <div class="container">
+      <div class="section-head">
+        <h2>Témoignages</h2>
+        <p>Ils nous ont fait confiance pour leurs projets.</p>
+      </div>
+      <div class="testimonials">
+        <div class="testimonial">
+          “Travail exceptionnel ! Notre maison a été livrée dans les délais.”
+          <b>— Marie K.</b>
+        </div>
+        <div class="testimonial">
+          “Équipe à l’écoute et professionnelle, je recommande.”
+          <b>— Paul D.</b>
+        </div>
+        <div class="testimonial">
+          “Rénovation parfaite, notre bureau est transformé.”
+          <b>— Entreprise X</b>
+        </div>
+      </div>
     </div>
-    <div class="testimonials">
-      <div class="testimonial">“Travail exceptionnel ! Notre maison a été livrée dans les délais.”<b>— Marie K.</b></div>
-      <div class="testimonial">“Équipe à l’écoute et professionnelle, je recommande.”<b>— Paul D.</b></div>
-      <div class="testimonial">“Rénovation parfaite, notre bureau est transformé.”<b>— Entreprise X</b></div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="portfolio">
-  <div class="container">
-    <div class="section-head">
-      <h2>Portfolio</h2>
-      <p>Quelques réalisations de notre équipe.</p>
+  <section id="portfolio">
+    <div class="container">
+      <div class="section-head">
+        <h2>Portfolio</h2>
+        <p>Quelques réalisations de notre équipe.</p>
+      </div>
+      <div class="grid">
+        <a href="portfolio/index.html"
+          ><img
+            src="images/bat1.jpg"
+            alt="Villa contemporaine"
+        /></a>
+        <a href="portfolio/index.html"
+          ><img
+            src="images/bat2.jpg"
+            alt="Extension maison"
+        /></a>
+        <a href="portfolio/index.html"
+          ><img
+            src="images/bg1.jpg"
+            alt="Bâtiment commercial"
+        /></a>
+      </div>
     </div>
-    <div class="grid">
-      <a href="portfolio/index.html"><img src="https://images.unsplash.com/photo-1581092331005-c2a2d4798fbb?q=80&w=800" alt="Villa contemporaine"></a>
-      <a href="portfolio/index.html"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800" alt="Extension maison"></a>
-      <a href="portfolio/index.html"><img src="https://images.unsplash.com/photo-1594712218289-5c77cc642bf9?q=80&w=800" alt="Bâtiment commercial"></a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<footer id="contact">
-  <p>📍 Kinshasa, RDC — ✉️ contact@Pulse-Technologie-Bâtiment.africa</p>
-  <p>© <span id="year"></span> Batitech. Tous droits réservés.</p>
-</footer>
+  <footer id="contact">
+    <p>📍 Kinshasa, RDC — ✉️ contact@Pulse-Technologie-Bâtiment.africa</p>
+    <p>© <span id="year"></span> Batitech. Tous droits réservés.</p>
+  </footer>
 
-<script src="js/main.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

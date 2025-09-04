@@ -1,326 +1,132 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pulse-Technologies — Systèmes solaires & stockage intelligents</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <!-- fonts Google peuvent rester -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pulse-Technologies — Bâtiment • Énergies Renouvelables • Informatique</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
 </head>
+<body class="light">
 
-<body>
-  <!-- Header -->
-  <header>
-    <div class="container nav">
-      <a class="brand" href="#" aria-label="Accueil Pulse-Technologies">
-        <span class="logo" aria-hidden="true">⚡</span>
-        <span>Pulse-Technologies</span>
-      </a>
-      <nav class="nav-links" aria-label="Navigation principale">
-        <a href="#solutions">Solutions</a>
-        <a href="#produits">Produits</a>
-        <a href="#projets">Projets</a>
-        <a href="#ressources">Ressources</a>
-        <a href="#contact">Contact</a>
-        <a class="cta" href="#devis">Obtenir un devis</a>
-      </nav>
-      <button class="burger" id="burger" aria-label="Ouvrir le menu">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#bfeee7" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      </button>
-    </div>
-  </header>
-
-  <!-- Mobile drawer -->
-  <div id="drawer" role="dialog" aria-label="Menu mobile">
-    <div class="container">
-      <a href="#solutions">Solutions</a>
-      <a href="#produits">Produits</a>
-      <a href="#projets">Projets</a>
-      <a href="#ressources">Ressources</a>
+<!-- Header -->
+<header>
+  <div class="container nav">
+    <a class="brand" href="#"><span class="logo">⚡</span><span>Pulse-Technologies</span></a>
+    <nav class="nav-links">
+      <a href="#batiment">Bâtiment</a>
+      <a href="#energie">Énergies Renouvelables</a>
+      <a href="#informatique">Informatique</a>
       <a href="#contact">Contact</a>
-      <a class="cta center" style="justify-content:center" href="#devis">Obtenir un devis</a>
-    </div>
+      <button class="cta" id="modeToggle">🌙 Dark</button>
+      <a class="cta" href="#devis">Obtenir un devis</a>
+    </nav>
+    <button class="burger" id="burger">☰</button>
   </div>
+</header>
+<div id="drawer"><div class="container">
+  <a href="#batiment">Bâtiment</a>
+  <a href="#energie">Énergies Renouvelables</a>
+  <a href="#informatique">Informatique</a>
+  <a href="#contact">Contact</a>
+  <button class="cta" id="modeToggleMobile">🌙 Dark</button>
+  <a class="cta" href="#devis">Obtenir un devis</a>
+</div></div>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <span class="badge">⚡ Nouvelle génération • Monitoring inclus</span>
-        <h1 class="headline">L’énergie <span class="grad">solaire intelligente</span> pour maisons & PME.</h1>
-        <p class="sub">Étude, fourniture et installation de solutions solaires performantes : onduleurs hybrides, batteries LiFePO₄, panneaux haut rendement et supervision web/mobile.</p>
-        <div class="hero-actions">
-          <a class="btn" href="#devis">Démarrer mon projet</a>
-          <a class="btn secondary" href="#produits">Voir les produits</a>
-        </div>
-        <div class="card" style="margin-top:16px">
-          <div class="center small">🔋 6000 cycles @80% DoD • ☀️ Modules Tier-1 • 📶 4G/Wi-Fi IoT</div>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="glow" aria-hidden="true"></div>
-        <div class="mockup">
-          <img alt="Aperçu de l'application de suivi énergétique" src="images/slide1.webp" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section >
-  <div class="slider">
-  <div class="slides">
-    <img src="images/slide1.jpg" alt="Installation solaire 1">
-    <img src="images/slide2.jpg" alt="Installation solaire 2">
-    <img src="images/slide3.jpeg" alt="Monitoring application solaire">
-  </div>
+<!-- Hero avec slider -->
+<section class="hero">
+  <div class="hero-slide active" style="background-image:url('images/slide1.jpg');"></div>
+  <div class="hero-slide" style="background-image:url('images/slide2.jpg');"></div>
+  <div class="hero-slide" style="background-image:url('images/slide4.jpg');"></div>
+  <!-- Ajoute après tes slides dans .hero -->
+<div class="hero-btns">
+  <button class="active" onclick="gotoSlide(0)"></button>
+  <button onclick="gotoSlide(1)"></button>
+  <button onclick="gotoSlide(2)"></button>
 </div>
+
+  <div class="container">
+    <h1>Des solutions <span>innovantes</span> pour construire l’avenir.</h1>
+    <p>Pulse-Technologies regroupe 3 pôles d’expertise : Bâtiment, Énergies Renouvelables et Informatique pour accompagner les entreprises et particuliers.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#devis">Démarrer mon projet</a>
+      <a class="btn secondary" href="#batiment">Découvrir nos activités</a>
+    </div>
+    
+  </div>
 </section>
 
-  <!-- Solutions -->
-  <section id="solutions">
-    <div class="container">
-      <div class="section-head">
-        <h2>Solutions clés en main</h2>
-        <p>Accompagnement de bout en bout : audit énergétique, dimensionnement, installation certifiée, maintenance et monitoring.</p>
-      </div>
-      <div class="grid cols-3">
-        <article class="card">
-          <div class="icon">🔌</div>
-          <h3>Onduleurs hybrides</h3>
-          <p>Priorité solaire, bascule réseau/groupe sans coupure, MPPT multi-entrées.</p>
-          <a class="cta-mini" href="#devis">Demander un chiffrage →</a>
-        </article>
-        <article class="card">
-          <div class="icon">🔋</div>
-          <h3>Batteries LiFePO₄</h3>
-          <p>Cycles élevés, BMS intelligent, extension modulaire jusqu’à 40 kWh.</p>
-          <a class="cta-mini" href="#devis">Dimensionner mon pack →</a>
-        </article>
-        <article class="card">
-          <div class="icon">☀️</div>
-          <h3>Kits solaires</h3>
-          <p>Résidentiel & PME, installation rapide et conformité électrique.</p>
-          <a class="cta-mini" href="#devis">Voir un exemple →</a>
-        </article>
-      </div>
+<!-- Sections Activités -->
+<section id="batiment">
+  <div class="container">
+    <div class="section-head"><h2>Pulse-Technologie-Bâtiment</h2><p>Conception, construction et rénovation de bâtiments modernes et durables.</p></div>
+    <div class="grid cols-3">
+      <div class="card"><h3>🏗️ Construction</h3><p>Immeubles, villas, bureaux avec standards internationaux.</p></div>
+      <div class="card"><h3>📐 Architecture</h3><p>Plans sur mesure, optimisation d’espace et design moderne.</p></div>
+      <div class="card"><h3>🛠️ Rénovation</h3><p>Mise à neuf et adaptation énergétique de vos locaux.</p></div>
     </div>
-  </section>
-
-  <!-- Produits -->
-  <section id="produits">
-    <div class="container">
-      <div class="section-head">
-        <h2>Notre gamme de produits</h2>
-        <p>Composants fiables, sélectionnés chez des fabricants reconnus pour des performances constantes.</p>
-      </div>
-      <div class="grid cols-4">
-        <div class="tile">
-          <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1200&auto=format&fit=crop" alt="Panneaux solaires sur toiture" />
-          <div><span class="pill">Panneaux</span><h3>Modules haute efficacité</h3><p class="small">405–560 Wc • 25 ans de garantie.</p></div>
-        </div>
-        <div class="tile">
-          <img src="https://images.unsplash.com/photo-1618172193763-c511deb635ca?q=80&w=1200&auto=format&fit=crop" alt="Batteries lithium en rack" />
-          <div><span class="pill">Stockage</span><h3>Batteries LiFePO₄</h3><p class="small">48 V rack • 100–200 Ah • 6000 cycles.</p></div>
-        </div>
-        <div class="tile">
-          <img src="https://images.unsplash.com/photo-1620287341063-9a9b9a2c59f1?q=80&w=1200&auto=format&fit=crop" alt="Onduleur hybride mural" />
-          <div><span class="pill">Conversion</span><h3>Onduleurs hybrides</h3><p class="small">3–15 kVA • MPPT • bascule instantanée.</p></div>
-        </div>
-        <div class="tile">
-          <img src="https://images.unsplash.com/photo-1518614189403-1e1de6cf80d4?q=80&w=1200&auto=format&fit=crop" alt="Application de monitoring" />
-          <div><span class="pill">Logiciel</span><h3>Monitoring & IoT</h3><p class="small">Web/mobile • alertes • API ouverte.</p></div>
-        </div>
-      </div>
-      <div class="center" style="margin-top:18px">
-        <a class="btn" href="#catalogue">Télécharger le mini-catalogue</a>
-      </div>
+    <div class="section-actions" style="margin-top: 2rem; text-align: center;">
+      <a href="batiment/index.html" class="btn">En savoir plus sur le Bâtiment</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Stats -->
-  <section aria-label="Chiffres clés">
-    <div class="container stats">
-      <div class="stat"><b>2.5 MWh+</b><span>d’énergie stockée/jour</span></div>
-      <div class="stat"><b>98.6%</b><span>taux de satisfaction</span></div>
-      <div class="stat"><b>1200+</b><span>installations actives</span></div>
-      <div class="stat"><b>15</b><span>villes couvertes</span></div>
+<section id="energie">
+  <div class="container">
+    <div class="section-head"><h2>Pulse-Technologie-Énergies Renouvelables</h2><p>Solutions solaires intelligentes pour l’autonomie énergétique.</p></div>
+    <div class="grid cols-3">
+      <div class="card"><h3>☀️ Kits solaires</h3><p>Installations pour maisons et PME avec monitoring inclus.</p></div>
+      <div class="card"><h3>🔋 Stockage</h3><p>Batteries LiFePO₄ haute performance, longue durée de vie.</p></div>
+      <div class="card"><h3>🔌 Onduleurs hybrides</h3><p>Gestion solaire, réseau et groupe sans interruption.</p></div>
     </div>
-  </section>
-
-  <!-- Projets -->
-  <section id="projets">
-    <div class="container">
-      <div class="section-head">
-        <h2>Projets récents</h2>
-        <p>Du résidentiel haut rendement aux sites isolés télécom, des systèmes robustes et scalables.</p>
-      </div>
-      <div class="grid cols-3">
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1625030645410-c083764e8d25?q=80&w=1200&auto=format&fit=crop" alt="Installation solaire villa" />
-          <h3>Villa — 10 kVA hybride</h3>
-          <p class="small">Autonomie nocturne 12 h, bascule réseau transparente, suivi mobile.</p>
-        </article>
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1536924940846-227afb31e2a5?q=80&w=1200&auto=format&fit=crop" alt="Rooftop PME" />
-          <h3>PME — 30 kW rooftop</h3>
-          <p class="small">Réduction facture ~48 %, amortissement estimé à 3,6 ans.</p>
-        </article>
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1533251287810-4b7a9b31d51f?q=80&w=1200&auto=format&fit=crop" alt="Site isolé télécom" />
-          <h3>Télécom — site isolé</h3>
-          <p class="small">Back-up 48 V LiFePO₄, télémétrie 4G, disponibilité 99,95 %.</p>
-        </article>
-      </div>
+     <div class="section-actions" style="margin-top: 2rem; text-align: center;">
+      <a href="energie/index.html" class="btn">En savoir plus sur les Énergies Renouvelables</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Ressources / FAQ -->
-  <section id="ressources">
-    <div class="container">
-      <div class="section-head">
-        <h2>Ressources & FAQ</h2>
-        <p>Tout ce qu’il faut pour bien dimensionner, installer et exploiter votre système solaire.</p>
-      </div>
-      <div class="grid cols-3">
-        <article class="card">
-          <div class="icon">📘</div>
-          <h3>Guide de dimensionnement</h3>
-          <p>Puissance, énergie quotidienne, réserve batterie et ratio solaire.</p>
-          <a class="cta-mini" href="#">Lire le guide →</a>
-        </article>
-        <article class="card">
-          <div class="icon">🛡️</div>
-          <h3>Garanties & SAV</h3>
-          <p>Contrats de service, extension de garantie, interventions sur site.</p>
-          <a class="cta-mini" href="#">Nos engagements →</a>
-        </article>
-        <article class="card">
-          <div class="icon">🧠</div>
-          <h3>FAQ technique</h3>
-          <p>MPPT vs PWM, cycles, compatibilité groupe, sécurité électrique.</p>
-          <a class="cta-mini" href="#">Voir la FAQ →</a>
-        </article>
-      </div>
-
-      <div class="accordion" id="faq" style="margin-top:18px">
-        <div class="acc-item">
-          <button class="acc-btn">Comment estimer ma consommation ? <span aria-hidden="true">+</span></button>
-          <div class="acc-panel">Listez vos appareils (W) et leur durée (h). La somme donne vos Wh/jour. Nous dimensionnons ensuite panneaux, onduleur et batteries.</div>
-        </div>
-        <div class="acc-item">
-          <button class="acc-btn">Que signifie 6000 cycles ? <span aria-hidden="true">+</span></button>
-          <div class="acc-panel">Un cycle = charge complète + décharge. 6000 cycles @80% DoD ≈ 10-15 ans selon usage.</div>
-        </div>
-        <div class="acc-item">
-          <button class="acc-btn">Réseau + solaire, c’est possible ? <span aria-hidden="true">+</span></button>
-          <div class="acc-panel">Oui, les onduleurs hybrides priorisent le solaire et complètent par le réseau ou un groupe électrogène.</div>
-        </div>
-      </div>
+<section id="informatique">
+  <div class="container">
+    <div class="section-head"><h2>Pulse-Technologie-Informatique</h2><p>Solutions digitales pour booster votre transformation numérique.</p></div>
+    <div class="grid cols-3">
+      <div class="card"><h3>💻 Développement Web</h3><p>Sites vitrines, e-commerce et applications sur mesure.</p></div>
+      <div class="card"><h3>📱 Applications Mobiles</h3><p>Apps Android & iOS performantes et ergonomiques.</p></div>
+      <div class="card"><h3>☁️ Cloud & Cybersécurité</h3><p>Infrastructure, sauvegarde et protection avancée.</p></div>
     </div>
-  </section>
-
-  <!-- Devis / Contact -->
-  <section id="devis">
-    <div class="container">
-      <div class="section-head">
-        <h2>Un projet ? Parlons-en.</h2>
-        <p>Décrivez votre besoin : site, puissance, budget estimatif. Nous revenons vers vous rapidement.</p>
-      </div>
-      <div class="grid cols-3">
-        <form class="card" onsubmit="event.preventDefault(); alert('Merci ! Nous vous contacterons prochainement.');" aria-label="Formulaire de contact">
-          <label class="small">Nom complet<br><input class="input" type="text" placeholder="Votre nom" required></label>
-          <label class="small">Email<br><input class="input" type="email" placeholder="vous@exemple.com" required></label>
-          <label class="small">Téléphone<br><input class="input" type="tel" placeholder="+243 …" required></label>
-          <label class="small">Message<br><textarea class="input" rows="5" placeholder="Décrivez votre projet (puissance, lieu, délais)…" required></textarea></label>
-          <button class="btn" type="submit">Envoyer ma demande</button>
-        </form>
-        <div class="card">
-          <h3>Nos coordonnées</h3>
-          <p class="small">Pulse-Technologies, Av. Solaire 12, Kinshasa, RDC</p>
-          <p class="small">Tél. : +243 000 000 000<br>Email : contact@pulse-technologies.africa</p>
-          <div style="margin-top:12px">
-            <iframe title="Carte" style="width:100%;height:220px;border:1px solid var(--border);border-radius:12px" loading="lazy" src="https://maps.google.com/maps?q=Kinshasa&t=&z=12&ie=UTF8&iwloc=&output=embed"></iframe>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Pourquoi nous ?</h3>
-          <ul class="small">
-            <li>Étude & installation certifiées</li>
-            <li>Équipements premium uniquement</li>
-            <li>Monitoring inclus (web/mobile)</li>
-            <li>Contrats SAV & extension de garantie</li>
-          </ul>
-          <div style="margin-top:12px">
-            <form onsubmit="event.preventDefault(); alert('Merci pour votre inscription !');">
-              <label class="small">Recevoir nos conseils par email
-                <input class="input" type="email" placeholder="votre email">
-              </label>
-              <button class="btn" type="submit" style="margin-top:12px">S’abonner</button>
-            </form>
-          </div>
-        </div>
-      </div>
+     <div class="section-actions" style="margin-top: 2rem; text-align: center;">
+      <a href="informatique/index.html" class="btn">En savoir plus sur les Énergies Renouvelables</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Témoignages -->
-  <section aria-label="Témoignages">
-    <div class="container">
-      <div class="section-head">
-        <h2>Ils nous font confiance</h2>
-        <p>Retours de nos clients après mise en service.</p>
-      </div>
-      <div class="grid cols-3">
-        <div class="testimonial"><div class="avatar" aria-hidden="true"></div><div><b>F. Mbuyi</b><div class="small">« Plus de coupures au bureau, suivi clair sur l’app. »</div></div></div>
-        <div class="testimonial"><div class="avatar" aria-hidden="true"></div><div><b>A. Kaseba</b><div class="small">« Équipe sérieuse, installation propre et conseils utiles. »</div></div></div>
-        <div class="testimonial"><div class="avatar" aria-hidden="true"></div><div><b>B. Ngoy</b><div class="small">« Batteries performantes, autonomie conforme à l’étude. »</div></div></div>
-      </div>
+<!-- Footer -->
+<footer id="contact">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand"><span class="logo"></span><span>Pulse-Technologies</span></div>
+      <p class="small">Bâtiment • Énergies Renouvelables • Informatique</p>
+      <p class="small">© <span id="year"></span> Pulse-Technologies. Tous droits réservés.</p>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer id="contact">
-    <div class="container footer-grid">
-      <div>
-        <div class="brand" style="margin-bottom:10px"><span class="logo" aria-hidden="true"></span><span>Pulse-Technologies</span></div>
-        <p class="small">Solutions solaires et de stockage : simples, durables et intelligentes.</p>
-        <p class="small" style="margin-top:16px">© <span id="year"></span> Pulse-Technologies. Tous droits réservés.</p>
-      </div>
-      <div>
-        <b>Entreprise</b>
-        <ul class="small" style="list-style:none;padding:0;line-height:1.9">
-          <li><a href="#solutions">Solutions</a></li>
-          <li><a href="#produits">Produits</a></li>
-          <li><a href="#projets">Projets</a></li>
-          <li><a href="#ressources">Ressources</a></li>
-        </ul>
-      </div>
-      <div>
-        <b>Légal</b>
-        <ul class="small" style="list-style:none;padding:0;line-height:1.9">
-          <li><a href="#">Conditions</a></li>
-          <li><a href="#">Confidentialité</a></li>
-          <li><a href="#">Cookies</a></li>
-        </ul>
-      </div>
-      <div>
-        <b>Contact</b>
-        <ul class="small" style="list-style:none;padding:0;line-height:1.9">
-          <li>Email: support@pulse-technologies.africa</li>
-          <li>Tél: +243 000 000 000</li>
-          <li>WhatsApp: +243 000 000 000</li>
-        </ul>
-      </div>
+    <div>
+      <b>Navigation</b>
+      <ul class="small" style="list-style:none;padding:0;line-height:1.8">
+        <li><a href="#batiment">Bâtiment</a></li>
+        <li><a href="#energie">Énergies</a></li>
+        <li><a href="#informatique">Informatique</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
-  </footer>
+    <div>
+      <b>Contact</b>
+      <ul class="small" style="list-style:none;padding:0;line-height:1.8">
+        <li>Email: contact@pulse-technologies.africa</li>
+        <li>Tél: +243 000 000 000</li>
+        <li>WhatsApp: +243 000 000 000</li>
+      </ul>
+    </div>
+  </div>
+</footer>
 
-      <button id="theme-toggle" class="toggle-theme" aria-label="Basculer thème">
-  🌙
-</button>
-<script src="js/main.js" defer></script>
-
+<script src='js/main.js' defer></script>
 </body>
 </html>

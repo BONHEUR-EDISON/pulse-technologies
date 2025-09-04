@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio - MonSite</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <link rel="stylesheet" href="css/styles.css" />
+
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="logo">MonSite</div>
+  <nav>
+     <a href="../index.html">Accueil</a>
+      <a href="../construction/index.html">Construction</a>
+      <a href="../architecture/index.html">Architecture</a>
+      <a href="../renovation/index.html">Rénovation</a>
+      <a href="../portfolio/index.html">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div>
+    <i class="fa fa-moon" id="themeToggle" style="cursor:pointer; margin-right:1rem;"></i>
+    <i class="fa fa-bars burger"></i>
+  </div>
+</header>
+
+<!-- Portfolio Section -->
+<section id="portfolio">
+  <h2>Notre Portfolio</h2>
+  <div class="chips">
+    <div class="chip active" data-filter="all">Tous</div>
+    <div class="chip" data-filter="construction">Construction</div>
+    <div class="chip" data-filter="renovation">Rénovation</div>
+    <div class="chip" data-filter="architecture">Architecture</div>
+  </div>
+  <div class="gallery">
+    <div class="gal-item" data-cat="construction">
+      <img src="img/construction1.jpg" alt="Construction 1">
+      <div class="overlay">Construction Moderne</div>
+    </div>
+    <div class="gal-item" data-cat="renovation">
+      <img src="img/renovation1.jpg" alt="Rénovation 1">
+      <div class="overlay">Rénovation Complète</div>
+    </div>
+    <div class="gal-item" data-cat="architecture">
+      <img src="img/architecture1.jpg" alt="Architecture 1">
+      <div class="overlay">Architecture Design</div>
+    </div>
+    <div class="gal-item" data-cat="construction">
+      <img src="img/construction2.jpg" alt="Construction 2">
+      <div class="overlay">Bâtiment Industriel</div>
+    </div>
+    <div class="gal-item" data-cat="renovation">
+      <img src="img/renovation2.jpg" alt="Rénovation 2">
+      <div class="overlay">Maison Rénovée</div>
+    </div>
+    <div class="gal-item" data-cat="architecture">
+      <img src="img/architecture2.jpg" alt="Architecture 2">
+      <div class="overlay">Design Urbain</div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  &copy; <span id="year"></span> MonSite. Tous droits réservés.
+</footer>
+<script src="js/main.js" defer></script>
+
+</body>
+</html>

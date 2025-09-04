@@ -1,50 +1,67 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const burger = document.querySelector('.burger');
-  const drawer = document.getElementById('drawer');
-  const toggleBtn = document.getElementById('theme-toggle');
-  const root = document.documentElement;
+// Toggle drawer mobile
+const burger = document.getElementById('burger');
+const drawer = document.getElementById('drawer');
+burger?.addEventListener('click',()=>{drawer.style.display=drawer.style.display==='block'?'none':'block'});
 
-  // Toggle drawer mobile
-  burger?.addEventListener('click', () => {
-    const isOpen = drawer.style.display === 'block' || drawer.style.display === 'flex';
-    drawer.style.display = isOpen ? 'none' : 'flex';
-  });
-
-  // Fermer drawer au clic sur lien
-  drawer?.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      drawer.style.display = 'none';
-    });
-  });
-
-  // Accordion FAQ
-  document.querySelectorAll('.acc-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item = btn.parentElement;
-      item.classList.toggle('active');
-    });
-  });
-
-  // Initialisation thème (localStorage ou préférence système)
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    root.setAttribute('data-theme', 'dark');
-    toggleBtn.textContent = '☀️';
-  } else {
-    root.removeAttribute('data-theme');
-    toggleBtn.textContent = '🌙';
+// Switch light/dark mode
+const modeBtn=document.getElementById('modeToggle');
+const modeBtnMobile=document.getElementById('modeToggleMobile');
+function toggleMode(){
+  if(document.body.classList.contains('light')){
+    document.body.classList.replace('light','dark');
+    modeBtn.textContent='☀️ Light';
+    modeBtnMobile.textContent='☀️ Light';
+  }else{
+    document.body.classList.replace('dark','light');
+    modeBtn.textContent='🌙 Dark';
+    modeBtnMobile.textContent='🌙 Dark';
   }
+}
+modeBtn?.addEventListener('click',toggleMode);
+modeBtnMobile?.addEventListener('click',toggleMode);
 
-  // Toggle thème clair/sombre au clic
-  toggleBtn.addEventListener('click', () => {
-    if (root.getAttribute('data-theme') === 'dark') {
-      root.removeAttribute('data-theme');
-      localStorage.setItem('theme', 'light');
-      toggleBtn.textContent = '🌙';
-    } else {
-      root.setAttribute('data-theme', 'dark');
-      localStorage.setItem('theme', 'dark');
-      toggleBtn.textContent = '☀️';
-    }
+// Hero slider
+const slides=document.querySelectorAll('.hero-slide');
+let currentSlide=0;
+setInterval(()=>{
+  slides[currentSlide].classList.remove('active');
+  currentSlide=(currentSlide+1)%slides.length;
+  slides[currentSlide].classList.add('active');
+},5000);
+
+// Cards animation au scroll
+const cards=document.querySelectorAll('.card');
+function revealCards(){
+  const triggerBottom=window.innerHeight*0.85;
+  cards.forEach(card=>{
+    const cardTop=card.getBoundingClientRect().top;
+    if(cardTop<triggerBottom){card.classList.add('visible')}
   });
-});
+}
+window.addEventListener('scroll',revealCards);
+revealCards();
+
+// Year
+document.getElementById('year').textContent=new Date().getFullYear();
+// Ajoute dans <script>
+// Navigation boutons hero
+const heroButtons = document.querySelectorAll('.hero-btns button');
+function gotoSlide(n){
+  slides[currentSlide].classList.remove('active');
+  heroButtons[currentSlide].classList.remove('active');
+  currentSlide=n;
+  slides[currentSlide].classList.add('active');
+  heroButtons[currentSlide].classList.add('active');
+}
+
+// Animation sections au scroll
+const sections=document.querySelectorAll('section');
+function revealSections(){
+  const triggerBottom = window.innerHeight * 0.9;
+  sections.forEach(section=>{
+    const top=section.getBoundingClientRect().top;
+    if(top<triggerBottom){section.classList.add('visible')}
+  });
+}
+window.addEventListener('scroll',revealSections);
+revealSections();

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pulse Bâtiment — Construction | Villas, bâtiments commerciaux, ouvrages publics</title>
+  <meta name="description"
+    content="Construction clé en main : résidentiel, commercial, industriel et public. Études, gros œuvre, second œuvre, qualité certifiée et respect des délais." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+  </style>
+</head>
+
+<body data-theme="light">
+  <!-- Header -->
+  <a href="#main" class="small"
+    style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden">Aller au contenu</a>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html"><span class="logo" aria-hidden="true">🏗️</span><span>Pulse Bâtiment</span></a>
+      <nav class="nav-links" aria-label="Navigation primaire">
+        <a href="../index.html">Accueil</a>
+        <a href="../construction/index.html">Construction</a>
+        <a href="../architecture/index.html">Architecture</a>
+        <a href="../renovation/index.html">Rénovation</a>
+        <a href="../portfolio/index.html">Portfolio</a>
+        <a class="cta" href="#devis">Obtenir un devis</a>
+        <div id="theme-toggle" title="Basculer le thème" aria-label="Basculer le thème">🌙</div>
+      </nav>
+      <button class="burger" id="burger" aria-label="Ouvrir le menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round">
+          <path d="M3 6h18M3 12h18M3 18h18" />
+        </svg>
+      </button>
+    </div>
+  </header>
+  <!-- Drawer mobile -->
+  <div id="drawer" role="dialog" aria-label="Menu mobile">
+    <div class="container">
+      <a href="../index.html">Accueil</a>
+      <a href="../construction/index.html">Construction</a>
+      <a href="../architecture/index.html">Architecture</a>
+      <a href="../renovation/index.html">Rénovation</a>
+      <a href="../portfolio/index.html">Portfolio</a>
+      <a class="cta center" href="#devis">Obtenir un devis</a>
+      <div id="theme-toggle-drawer">🌙</div>
+    </div>
+  </div>
+
+  <!-- Fil d'Ariane -->
+  <div class="breadcrumb" aria-label="Fil d'Ariane">
+    <div class="container small">
+      <a class="crumb" href="index.html">Accueil</a> › <span class="crumb"><strong>Construction</strong></span>
+    </div>
+  </div>
+
+  <!-- HERO SLIDER -->
+  <section class="hero" aria-label="En-tête Construction">
+    <div class="hero-viewport">
+      <div class="slides">
+        <div class="slide active"
+          style="background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1600&auto=format&fit=crop');">
+        </div>
+        <div class="slide"
+          style="background-image:url('https://images.unsplash.com/photo-1581090700227-c7b3b50cdcd7?q=80&w=1600&auto=format&fit=crop');">
+        </div>
+        <div class="slide"
+          style="background-image:url('https://images.unsplash.com/photo-1591453089816-0fbb971b454c?q=80&w=1600&auto=format&fit=crop');">
+        </div>
+      </div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div>
+          <h1>Construire <span class="grad">solide et durable</span>.</h1>
+          <p>De la villa contemporaine aux ouvrages publics, nous réalisons des projets de A à Z : étude, gros œuvre,
+            second œuvre et suivi de chantier.
+          </p>
+          <div class="hero-actions">
+            <a class="cta" href="#devis">Démarrer mon projet</a>
+            <a class="ghost" href="#offres">Découvrir nos offres</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-dots" aria-hidden="true">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Badges animés -->
+  <div class="badges" aria-label="Garanties et atouts">
+    <span class="badge"><span class="ping"></span> Garantie décennale</span>
+    <span class="badge"><span class="ping"></span> Respect des délais</span>
+    <span class="badge"><span class="ping"></span> Qualité certifiée</span>
+    <span class="badge"><span class="ping"></span> Sécurité & conformité</span>
+  </div>
+
+  <main id="main">
+    <!-- Offres -->
+    <section id="offres">
+      <div class="container">
+        <div class="section-head">
+          <h2>Offres Construction</h2>
+          <p>Quatre pôles pour couvrir l’ensemble du cycle de vie d’un chantier.</p>
+        </div>
+        <div class="grid cols-4">
+          <article class="card reveal">
+            <div class="icon wiggle">📐</div>
+            <h3>Études & permis</h3>
+            <p>Avant-projet, dossier administratif, coordination bureau d’études, estimatif et planning.</p>
+            <a class="cta-mini" href="#processus">Voir le processus →</a>
+          </article>
+          <article class="card reveal">
+            <div class="icon float">🏗️</div>
+            <h3>Gros œuvre</h3>
+            <p>Terrassement, fondations, structures béton/acier, élévation et étanchéité.</p>
+            <a class="cta-mini" href="#realisations">Exemples concrets →</a>
+          </article>
+          <article class="card reveal">
+            <div class="icon wiggle">🧱</div>
+            <h3>Second œuvre</h3>
+            <p>Cloisons, menuiseries, plomberie, électricité, CVC, finitions de qualité.</p>
+            <a class="cta-mini" href="#realisations">Voir nos finitions →</a>
+          </article>
+          <article class="card reveal">
+            <div class="icon float">🕵️‍♂️</div>
+            <h3>Suivi & réception</h3>
+            <p>Conduite de travaux, contrôle qualité, OPR, DOE, garantie et SAV.</p>
+            <a class="cta-mini" href="#temoignages">Ils témoignent →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carrousel Réalisations Construction -->
+    <section id="realisations">
+      <div class="container">
+        <div class="section-head">
+          <h2>Réalisations récentes</h2>
+          <p>Un aperçu de chantiers livrés : résidentiel, commercial, industriel et public.</p>
+        </div>
+        <div class="carousel reveal" aria-roledescription="carousel" aria-label="Réalisations">
+          <div class="carousel-track" role="group">
+            <div class="carousel-item">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop"
+                alt="Villa contemporaine large baie vitrée" loading="lazy" />
+              <div class="carousel-caption"><b>Villa contemporaine</b>
+                <div class="small">Gros œuvre + second œuvre premium</div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="https://images.unsplash.com/photo-1594712218289-5c77cc642bf9?q=80&w=1600&auto=format&fit=crop"
+                alt="Bâtiment de bureaux moderne" loading="lazy" />
+              <div class="carousel-caption"><b>Bureaux & commerces</b>
+                <div class="small">Plateaux modulaires • CVC • sécurité incendie</div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1600&auto=format&fit=crop"
+                alt="Ouvrage public et espace urbain" loading="lazy" />
+              <div class="carousel-caption"><b>Ouvrage public</b>
+                <div class="small">Normes d’accessibilité • espaces publics</div>
+              </div>
+            </div>
+          </div>
+          <button class="prev" aria-label="Précédent">◀</button>
+          <button class="next" aria-label="Suivant">▶</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Processus de chantier -->
+    <section id="processus">
+      <div class="container">
+        <div class="section-head">
+          <h2>Processus de chantier</h2>
+          <p>Une méthode éprouvée avec jalons et contrôles qualité à chaque étape.</p>
+        </div>
+        <div class="steps">
+          <div class="step reveal">
+            <b>1. Études</b>
+            <div class="small">Relevés, AVP/PRO, dossier permis, ingénierie structure & fluides.</div>
+          </div>
+          <div class="step reveal">
+            <b>2. Préparation</b>
+            <div class="small">Plan d’installation chantier, PPSPS, planning détaillé, achats.</div>
+          </div>
+          <div class="step reveal">
+            <b>3. Exécution</b>
+            <div class="small">Gros œuvre, second œuvre, réunions de chantier & contrôles.</div>
+          </div>
+          <div class="step reveal">
+            <b>4. Livraison</b>
+            <div class="small">OPR, levée des réserves, DOE, garantie & SAV.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chiffres clés -->
+    <section aria-label="Chiffres clés">
+      <div class="container stats">
+        <div class="stat reveal"><b>250+</b><span>chantiers livrés</span></div>
+        <div class="stat reveal"><b>98%</b><span>satisfaction clients</span></div>
+        <div class="stat reveal"><b>15</b><span>villes couvertes</span></div>
+        <div class="stat reveal"><b>10 ans</b><span>de garantie</span></div>
+      </div>
+    </section>
+
+    <!-- Témoignages clients -->
+    <section id="temoignages">
+      <div class="container">
+        <div class="section-head">
+          <h2>Ils nous font confiance</h2>
+          <p>Quelques retours récents après réception des ouvrages.</p>
+        </div>
+        <div class="testimonials">
+          <div class="testimonial reveal">
+            <div class="avatar" aria-hidden="true"></div>
+            <div><b>F. Mbuyi</b>
+              <div class="stars">★★★★★</div>
+              <div class="small">« Délais tenus, finitions impeccables, équipe réactive. »</div>
+            </div>
+          </div>
+          <div class="testimonial reveal">
+            <div class="avatar" aria-hidden="true"></div>
+            <div><b>A. Kaseba</b>
+              <div class="stars">★★★★☆</div>
+              <div class="small">« Très bon suivi de chantier et communication claire. »</div>
+            </div>
+          </div>
+          <div class="testimonial reveal">
+            <div class="avatar" aria-hidden="true"></div>
+            <div><b>B. Ngoy</b>
+              <div class="stars">★★★★★</div>
+              <div class="small">« Chantier propre, respect du budget et du planning. »</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mini‑Portfolio filtrable (cat. Construction) -->
+    <section id="mini-portfolio">
+      <div class="container">
+        <div class="section-head">
+          <h2>Mini‑portfolio Construction</h2>
+          <p>Sélection de réalisations. Pour plus d’exemples, consultez le <a href="portfolio.html"
+              style="text-decoration:underline">Portfolio complet</a>.</p>
+        </div>
+        <div class="filters" role="tablist" aria-label="Filtres portfolio">
+          <button class="chip active" data-filter="all" role="tab" aria-selected="true">Tout</button>
+          <button class="chip" data-filter="residentiel" role="tab">Résidentiel</button>
+          <button class="chip" data-filter="commercial" role="tab">Commercial</button>
+          <button class="chip" data-filter="industriel" role="tab">Industriel</button>
+          <button class="chip" data-filter="public" role="tab">Public</button>
+        </div>
+        <div class="gallery" style="margin-top:14px">
+          <figure class="gal-item reveal" data-cat="residentiel">
+            <img src="https://images.unsplash.com/photo-1600607687920-4ce8c559d8df?q=80&w=1200&auto=format&fit=crop"
+              alt="Maison familiale contemporaine" loading="lazy" />
+            <figcaption class="tag">Résidentiel</figcaption>
+          </figure>
+          <figure class="gal-item reveal" data-cat="commercial">
+            <img src="https://images.unsplash.com/photo-1529429612778-719a99b00b05?q=80&w=1200&auto=format&fit=crop"
+              alt="Showroom et bureaux" loading="lazy" />
+            <figcaption class="tag">Commercial</figcaption>
+          </figure>
+          <figure class="gal-item reveal" data-cat="industriel">
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop"
+              alt="Atelier industriel" loading="lazy" />
+            <figcaption class="tag">Industriel</figcaption>
+          </figure>
+          <figure class="gal-item reveal" data-cat="public">
+            <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop"
+              alt="Équipement public" loading="lazy" />
+            <figcaption class="tag">Public</figcaption>
+          </figure>
+          <figure class="gal-item reveal" data-cat="residentiel">
+            <img src="https://images.unsplash.com/photo-1617104678098-de229db51115?q=80&w=1200&auto=format&fit=crop"
+              alt="Villa avec piscine" loading="lazy" />
+            <figcaption class="tag">Résidentiel</figcaption>
+          </figure>
+          <figure class="gal-item reveal" data-cat="commercial">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop"
+              alt="Immeuble de bureaux" loading="lazy" />
+            <figcaption class="tag">Commercial</figcaption>
+          </figure>
+        </div>
+        <div class="center" style="margin-top:16px">
+          <a class="ghost" href="portfolio.html">Voir tout le portfolio →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="container">
+        <div class="section-head">
+          <h2>FAQ Construction</h2>
+          <p>Réponses aux questions les plus courantes sur nos chantiers.</p>
+        </div>
+        <div class="accordion">
+          <div class="acc-item">
+            <button class="acc-btn">Quels délais pour une villa ? <span>+</span></button>
+            <div class="acc-panel">Selon la surface et la complexité : entre 6 et 12 mois, hors délais administratifs.
+            </div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-btn">Gérez-vous les permis ? <span>+</span></button>
+            <div class="acc-panel">Oui, nous constituons le dossier permis et assurons les échanges avec
+              l’administration.</div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-btn">Quelles garanties ? <span>+</span></button>
+            <div class="acc-panel">Garantie décennale, assurance RC pro, contrôles qualité et DOE remis à la livraison.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Devis / Contact rapide -->
+    <section id="devis">
+      <div class="container">
+        <div class="section-head">
+          <h2>Un projet de construction ?</h2>
+          <p>Décrivez votre besoin : type de bâtiment, surface, budget estimatif. Nous revenons vers vous rapidement.
+          </p>
+        </div>
+        <div class="grid cols-3">
+          <form class="card" onsubmit="event.preventDefault(); alert('Merci ! Nous vous contacterons prochainement.');"
+            aria-label="Formulaire de contact">
+            <label class="small">Nom complet<br><input class="input" type="text" placeholder="Votre nom"
+                required></label>
+            <label class="small">Email<br><input class="input" type="email" placeholder="vous@exemple.com"
+                required></label>
+            <label class="small">Téléphone<br><input class="input" type="tel" placeholder="+243 …" required></label>
+            <label class="small">Message<br><textarea class="input" rows="5" placeholder="Type de projet, lieu, délais…"
+                required></textarea></label>
+            <button class="cta" type="submit">Envoyer ma demande</button>
+          </form>
+          <div class="card">
+            <h3>Coordonnées</h3>
+            <p class="small">Pulse Bâtiment, Av. du Projet 12, Kinshasa, RDC</p>
+            <p class="small">Tél. : +243 000 000 000<br>Email : contact@pulse-batiment.africa</p>
+          </div>
+          <div class="card">
+            <h3>Documents</h3>
+            <ul class="small">
+              <li><a href="#">Mémoire technique (PDF)</a></li>
+              <li><a href="#">Références chantiers (PDF)</a></li>
+              <li><a href="#">Charte qualité (PDF)</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand"><span class="logo"></span><span>Pulse Bâtiment</span></div>
+        <p class="small">Construction clé en main : solides, durables et conformes.</p>
+        <p class="small" style="margin-top:16px">© <span id="year"></span> Pulse Bâtiment. Tous droits réservés.</p>
+      </div>
+      <div>
+        <b>Pages</b>
+        <ul class="small" style="list-style:none;padding:0;line-height:1.9">
+
+          <div class="dark-toggle">🌙</div>
+          <li><a href="../index.html">Accueil</a></li>
+          <li> <a href="../construction/index.html">Construction</a></li>
+          <li><a href="../architecture/index.html">Architecture</a></li>
+          <li><a href="../renovation/index.html">Rénovation</a></li>
+          <li><a href="../portfolio/index.html">Portfolio</a></li>
+        </ul>
+      </div>
+      <div>
+        <b>Légal</b>
+        <ul class="small" style="list-style:none;padding:0;line-height:1.9">
+          <li><a href="#">Conditions</a></li>
+          <li><a href="#">Confidentialité</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+      <div>
+        <b>Contact</b>
+        <ul class="small" style="list-style:none;padding:0;line-height:1.9">
+          <li>Email: support@pulse-batiment.africa</li>
+          <li>Tél: +243 000 000 000</li>
+          <li>WhatsApp: +243 000 000 000</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <button id="toTop" title="Retour en haut" aria-label="Retour en haut">↑</button>
+
+  <!-- JSON-LD LocalBusiness minimal -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Pulse Bâtiment",
+    "url": "https://exemple.com/construction.html",
+    "telephone": "+243000000000",
+    "address": {"@type":"PostalAddress","addressLocality":"Kinshasa","addressCountry":"CD"},
+    "areaServed": "CD",
+    "sameAs": ["https://www.facebook.com/", "https://www.linkedin.com/"]
+  }
+  </script>
+
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>

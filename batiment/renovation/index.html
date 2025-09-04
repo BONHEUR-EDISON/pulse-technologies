@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pulse Bâtiment - Avant / Après</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <header>
+    <h1>Pulse Bâtiment</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="architecture.html">Architecture</a>
+      <a href="renovation.html">Rénovation</a>
+      <a href="portfolio.html">Portfolio</a>
+      <div class="dark-toggle">🌙</div>
+    </nav>
+  </header>
+  <!-- Drawer mobile -->
+  <div id="drawer" role="dialog" aria-label="Menu mobile">
+    <div class="container">
+      <a href="../index.html">Accueil</a>
+      <a href="../construction/index.html">Construction</a>
+      <a href="../architecture/index.html">Architecture</a>
+      <a href="../renovation/index.html">Rénovation</a>
+      <a href="../portfolio/index.html">Portfolio</a>
+      <a class="cta center" href="#devis">Obtenir un devis</a>
+      <div id="theme-toggle-drawer">🌙</div>
+    </div>
+  </div>
+
+  <!-- Fil d'Ariane -->
+  <div class="breadcrumb" aria-label="Fil d'Ariane">
+    <div class="container small">
+      <a class="crumb" href="index.html">Accueil</a> › <span class="crumb"><strong>Construction</strong></span>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Avant / Après - Transformations Réalisées</h2>
+      <p>Découvrez comment Pulse Bâtiment transforme vos espaces.</p>
+      <button class="btn-home" onclick="window.location.href='index.html'">⬅️ Retour à l'accueil</button>
+    </div>
+  </section>
+
+  <section class="badges">
+    <div class="badge">🏛️ Architecture</div>
+    <div class="badge">🏠 Rénovation</div>
+    <div class="badge">🌿 Écoconception</div>
+    <div class="badge">🛠️ Sur-mesure</div>
+  </section>
+
+  <section class="carousel-container">
+    <div class="carousel" id="carousel">
+      <div class="carousel-item">
+        <img src="https://picsum.photos/900/500?random=61" alt="Avant">
+        <div class="slider-overlay" id="slider1"><img src="https://picsum.photos/900/500?random=62" alt="Après"></div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://picsum.photos/900/500?random=63" alt="Avant">
+        <div class="slider-overlay" id="slider2"><img src="https://picsum.photos/900/500?random=64" alt="Après"></div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://picsum.photos/900/500?random=65" alt="Avant">
+        <div class="slider-overlay" id="slider3"><img src="https://picsum.photos/900/500?random=66" alt="Après"></div>
+      </div>
+    </div>
+    <div class="slider-labels"><span>Avant</span><span>Après</span></div>
+    <div class="carousel-buttons">
+      <button id="prev">⬅️ Précédent</button>
+      <button id="next">➡️ Suivant</button>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>Ils nous font confiance</h2>
+    <div class="testimonial">
+      "Pulse Bâtiment a métamorphosé notre maison et notre bureau en espaces modernes et fonctionnels. Une équipe
+      réactive et passionnée !"
+      <br><br><strong>- Client Satisfait</strong>
+    </div>
+  </section>
+
+  <section class="portfolio">
+    <h2>Portfolio</h2>
+    <div class="grid">
+      <img src="https://picsum.photos/400/300?random=11" alt="Projet A">
+      <img src="https://picsum.photos/400/300?random=12" alt="Projet B">
+      <img src="https://picsum.photos/400/300?random=13" alt="Projet C">
+      <img src="https://picsum.photos/400/300?random=14" alt="Projet D">
+      <img src="https://picsum.photos/400/300?random=15" alt="Projet E">
+      <img src="https://picsum.photos/400/300?random=16" alt="Projet F">
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-section">
+      <h3>Contactez-nous</h3>
+      <p>Email: contact@pulsebatiment.com</p>
+      <p>Téléphone: +243 123 456 789</p>
+      <div class="social-icons">
+        <a href="#">🌐</a>
+        <a href="#">📘</a>
+        <a href="#">🐦</a>
+        <a href="#">📸</a>
+      </div>
+    </div>
+    <div class="footer-section">
+      <h3>Liens rapides</h3>
+      <ul>
+        <li><a href="../index.html">Accueil</a></li>
+        <li> <a href="../construction/index.html">Construction</a></li>
+        <li><a href="../architecture/index.html">Architecture</a></li>
+        <li><a href="../renovation/index.html">Rénovation</a></li>
+        <li><a href="../portfolio/index.html">Portfolio</a></li>
+      </ul>
+    </div>
+    <div class="footer-section newsletter">
+      <h3>Newsletter</h3>
+      <p>Inscrivez-vous pour recevoir nos actualités</p>
+      <form>
+        <input type="email" placeholder="Votre email">
+        <button type="submit">S'inscrire</button>
+      </form>
+    </div>
+  </footer>
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>

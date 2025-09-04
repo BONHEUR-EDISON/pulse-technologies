@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Batitech — Construction, Architecture & Rénovation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#fdfdfd; --panel:#fff; --panel-2:#f5f5f5; --text:#0b1211; --muted:#555;
+  --brand:#ff9f1c; --brand-2:#ffbf69; --accent:#e6ff7a; --border:#ddd;
+  --radius:18px; --shadow:0 14px 40px rgba(0,0,0,.1); --max:1200px;
+}
+[data-theme="dark"] {
+  --bg:#0b1211; --panel:#0e1614; --panel-2:#0c1412; --text:#e9f6f1; --muted:#9fb5ae;
+  --border:#1c2a27; --shadow:0 14px 40px rgba(0,0,0,.35);
+}
+body {
+  margin:0; font-family:Inter, sans-serif; background:var(--bg); color:var(--text);
+}
+a {color:inherit; text-decoration:none}
+img {max-width:100%; display:block; border-radius:12px}
+.container{max-width:var(--max); margin:auto; padding:0 20px}
+
+/* Header */
+header{position:sticky;top:0;background:var(--panel);border-bottom:1px solid var(--border);z-index:50}
+.nav{display:flex;justify-content:space-between;align-items:center;height:70px}
+.logo{font-weight:800;font-size:1.3rem;color:var(--brand)}
+.nav-links{display:flex;gap:16px}
+.nav-links a{padding:8px 12px;border-radius:8px;color:var(--muted)}
+.nav-links a:hover{background:var(--panel-2);color:var(--text)}
+#theme-toggle{cursor:pointer;border:1px solid var(--border);border-radius:10px;width:38px;height:38px;display:grid;place-items:center}
+
+/* Hero */
+.hero{padding:70px 0;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px}
+.hero h1{font-size:2.6rem;font-weight:800;margin:0}
+.hero p{color:var(--muted);max-width:500px}
+.btn{display:inline-block;padding:12px 20px;border-radius:12px;font-weight:600;background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#042;font-size:1rem;margin-top:20px}
+.btn.secondary{background:var(--panel-2);color:var(--text);border:1px solid var(--border)}
+
+/* Badges */
+.badge{display:inline-block;padding:8px 16px;border-radius:999px;font-weight:600;color:#fff;background:var(--brand);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,159,28,.6)}70%{box-shadow:0 0 0 12px transparent}100%{box-shadow:0 0 0 0 transparent}}
+
+/* Sections */
+section{padding:70px 0;border-top:1px solid var(--border)}
+.section-head{text-align:center;margin-bottom:40px}
+.section-head h2{font-size:2rem;margin-bottom:10px}
+.section-head p{color:var(--muted)}
+
+/* Services carousel */
+.carousel{display:flex;overflow-x:auto;gap:16px;scroll-snap-type:x mandatory;padding-bottom:10px}
+.carousel::-webkit-scrollbar{display:none}
+.slide{flex:0 0 300px;background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:16px;scroll-snap-align:start;box-shadow:var(--shadow)}
+.slide h3{margin:10px 0}
+
+/* Témoignages */
+.testimonials{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.testimonial{background:var(--panel-2);padding:20px;border-radius:16px;box-shadow:var(--shadow);font-size:.95rem}
+.testimonial b{display:block;margin-top:12px;color:var(--brand)}
+
+/* Portfolio */
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.grid img{border-radius:16px;transition:.3s}
+.grid img:hover{transform:scale(1.03)}
+
+/* Footer */
+footer{padding:40px 0;text-align:center;background:var(--panel);border-top:1px solid var(--border);color:var(--muted)}
+</style>
+</head>
+<body data-theme="light">
+
+<header>
+  <div class="container nav">
+    <div class="logo"> <a href="../index.html">🏗️ Batitech</a></div>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#temoignages">Témoignages</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+      <div id="theme-toggle">🌙</div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero container">
+  <div>
+    <span class="badge">✨ Expertise certifiée</span>
+    <h1>Construisons vos projets avec <span style="color:var(--brand)">Batitech</span></h1>
+    <p>Maisons, bureaux, rénovations et architecture moderne. Notre équipe concrétise vos idées avec qualité et respect des délais.</p>
+    <a class="btn" href="#services">Découvrir nos services</a>
+  </div>
+  <img src="https://images.unsplash.com/photo-1599464443345-7b7a1bff2f53?q=80&w=1200&auto=format&fit=crop" alt="Chantier">
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <h2>Nos Services</h2>
+      <p>Choisissez le domaine qui correspond à votre projet.</p>
+    </div>
+    <div class="carousel">
+      <div class="slide">
+        <h3>🏠 Construction</h3>
+        <p>Maisons, bâtiments modernes avec garantie décennale.</p>
+        <a class="btn secondary" href="construction/index.html">En savoir plus</a>
+      </div>
+      <div class="slide">
+        <h3>🏛️ Architecture</h3>
+        <p>Plans, design et optimisation des espaces intérieurs.</p>
+        <a class="btn secondary" href="architecture/index.html">En savoir plus</a>
+      </div>
+      <div class="slide">
+        <h3>🔧 Rénovation</h3>
+        <p>Modernisation, extensions et transformation d’espaces.</p>
+        <a class="btn secondary" href="renovation/index.html">En savoir plus</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="temoignages">
+  <div class="container">
+    <div class="section-head">
+      <h2>Témoignages</h2>
+      <p>Ils nous ont fait confiance pour leurs projets.</p>
+    </div>
+    <div class="testimonials">
+      <div class="testimonial">“Travail exceptionnel ! Notre maison a été livrée dans les délais.”<b>— Marie K.</b></div>
+      <div class="testimonial">“Équipe à l’écoute et professionnelle, je recommande.”<b>— Paul D.</b></div>
+      <div class="testimonial">“Rénovation parfaite, notre bureau est transformé.”<b>— Entreprise X</b></div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="container">
+    <div class="section-head">
+      <h2>Portfolio</h2>
+      <p>Quelques réalisations de notre équipe.</p>
+    </div>
+    <div class="grid">
+      <a href="portfolio/index.html"><img src="https://images.unsplash.com/photo-1581092331005-c2a2d4798fbb?q=80&w=800" alt="Villa contemporaine"></a>
+      <a href="portfolio/index.html"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800" alt="Extension maison"></a>
+      <a href="portfolio/index.html"><img src="https://images.unsplash.com/photo-1594712218289-5c77cc642bf9?q=80&w=800" alt="Bâtiment commercial"></a>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <p>📍 Kinshasa, RDC — ✉️ contact@batitech.africa</p>
+  <p>© <span id="year"></span> Batitech. Tous droits réservés.</p>
+</footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+
+// toggle dark/light
+const toggle=document.getElementById('theme-toggle');
+toggle.addEventListener('click',()=>{
+  const theme=document.body.getAttribute('data-theme');
+  document.body.setAttribute('data-theme', theme==='light'?'dark':'light');
+  toggle.textContent = theme==='light'?'☀️':'🌙';
+});
+</script>
+</body>
+</html>

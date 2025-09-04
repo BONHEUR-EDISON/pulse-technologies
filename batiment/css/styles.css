@@ -140,7 +140,13 @@ header {
   .burger {
     display: block;
   }
-}
+
+
+ /* Breadcrumb */
+    .breadcrumb{background:var(--panel);border-bottom:1px solid var(--border)}
+    .breadcrumb .container{display:flex;gap:8px;align-items:center;height:44px}
+    .crumb{color:var(--muted)}
+    .crumb strong{color:var(--text)}}
 
 .hero {
   position: relative;
